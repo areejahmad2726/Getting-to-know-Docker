@@ -1,0 +1,12 @@
+1) Running a container
+docker run --name test-mysql -e MYSQL_ROOT_PASSWORD=123 -d mysql
+
+2) Execute mysql
+docker exec -it test-mysql mysql -uroot -p123
+
+3) Run commands inside Mysql
+show databases;
+create database student_details;
+create table student_details.student(Name charchar(25), ERP int, Phone int);
+insert into student_details.student(Name, ERP, Phone) values ('Areej', 27250, 123456789);
+select * from student_details.student;
